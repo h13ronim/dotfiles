@@ -61,7 +61,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+path=(
+  $HOME/.chefdk/gem/ruby/2.1.0/bin
+  /opt/chefdk/embedded/bin
+  /usr/local/bin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
