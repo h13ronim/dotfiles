@@ -50,6 +50,7 @@ plugins=(
   bgnotify
   bundler
   git
+  git-plus
   heroku
   ping
   radiozora
