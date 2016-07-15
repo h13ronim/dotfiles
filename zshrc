@@ -108,3 +108,4 @@ unsetopt inc_append_history
 source "$HOME/.oh-my-zsh-work/work.zsh"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if [ -f $HOME/.rvm/scripts/rvm ]; then source $HOME/.rvm/scripts/rvm; fi
