@@ -52,6 +52,7 @@ plugins=(
   git
   git-plus
   heroku
+  osx-plus
   ping
   radiozora
   web-search
