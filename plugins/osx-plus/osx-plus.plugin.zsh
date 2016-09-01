@@ -1,5 +1,5 @@
 function bluetooth-not-available-fix() {
-  rm /Library/Preferences/com.apple.Bluetooth.plist
+  sudo rm -f /Library/Preferences/com.apple.Bluetooth.plist
   echo "Bluetooth preferences file removed. Please restart your computer."
   echo ""
   echo "If bluetooth doesn't work after restart then please reset the SMC."
