@@ -11,7 +11,12 @@ install_custom_oh_my_zsh() {
   ln -sf $HOME/.oh-my-zsh-custom/zshrc $HOME/.zshrc
 }
 
+set_zsh_as_default_shell() {
+  chsh -s /usr/bin/zsh
+}
+
 install_customized_oh_my_zsh() {
   install_oh_my_zsh || return $?
   install_custom_oh_my_zsh || return $?
+  set_zsh_as_default_shell || return $?
 }
