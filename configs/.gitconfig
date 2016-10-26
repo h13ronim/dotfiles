@@ -1,0 +1,39 @@
+[alias]
+  st = "status -sb"
+  ci = commit
+  co = checkout
+  br = branch
+  di = diff
+  dih = diff HEAD
+  diw = "diff --word-diff"
+  s = show
+  sw = "show --word-diff"
+  upstream = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
+  pulr = "pull --rebase"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[user]
+	name = Marcin Michalowski
+	email = marcin@stick.pl
+[push]
+  default = current
+[diff]
+	algorithm = patience
+[core]
+	quotepath = false
+	excludesfile = ~/.gitignore_global
+	editor = /usr/bin/vim
+[init]
+	templatedir = ~/.git-templates
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f

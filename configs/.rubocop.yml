@@ -1,0 +1,12 @@
+Metrics/LineLength:
+  Max: 100
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  Excludes:
+    - db/schema.rb

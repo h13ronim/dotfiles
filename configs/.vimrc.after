@@ -1,0 +1,63 @@
+" Our favourite colors
+"colorscheme blackboard
+"colorscheme solarized
+"set background=light
+
+" Our favorite font
+"set guifont=Monaco:h16
+set guifont=Inconsolata:h20
+"set guifont=Hack:h18
+
+"
+set guioptions=gm
+
+" Maximalize on fullscreen
+if has("gui_running")
+  " set fu
+  set fuoptions=maxvert,maxhorz
+endif
+
+" Silent bell
+set visualbell t_vb=
+
+if janus#is_plugin_enabled('fugitive')
+  set statusline+=%{fugitive#statusline()}
+endif
+
+if janus#is_plugin_enabled('syntastic')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+endif
+
+" Spell checking
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+set spelllang=en,pl
+
+" Maximum column in which to search for syntax items.
+"set synmaxcol=180
+
+" Live search
+set incsearch
+
+" Do not highlight search results
+set nohls
+
+" Wrap long lines
+set wrap
+
+" Enable the display of function names in the status line
+let g:ctags_statusline=1
+
+" PHP tab indention
+" autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab
+
+"
+set cc=80
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
