@@ -1,5 +1,12 @@
 #!/bin/bash
 
+install_zsh() {
+  if [ ! -f /usr/bin/zsh ]; then
+    echo "Installing zsh..."
+    sudo apt-get install zsh || return $?
+  fi
+}
+
 install_oh_my_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   [ -d $HOME/.oh-my-zsh ]
@@ -16,6 +23,7 @@ set_zsh_as_default_shell() {
 }
 
 install_customized_oh_my_zsh() {
+  install_zsh || return $?
   install_oh_my_zsh || return $?
   install_custom_oh_my_zsh || return $?
   set_zsh_as_default_shell || return $?
