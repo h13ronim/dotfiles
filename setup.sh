@@ -1,10 +1,7 @@
 #!/bin/bash
 
-which git > /dev/null
-if [ $? -gt 0 ]; then
-  echo "Installing git..."
-  sudo apt-get install git || exit $?
-fi
+source scripts/git.sh
+install_git || exit $?
 
 mkdir -p $HOME/projects || exit $?
 
