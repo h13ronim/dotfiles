@@ -13,7 +13,7 @@ install_oh_my_zsh() {
 }
 
 install_oh_my_zsh_custom() {
-  git clone git@github.com:h13ronim/oh-my-zsh-custom.git $HOME/.oh-my-zsh-custom || return $?
+  git clone git@gitlab.com:h13ronim/oh-my-zsh-custom.git $HOME/.oh-my-zsh-custom || return $?
   mv $HOME/.zshrc $HOME/.zshrc.orig
   ln -sf $HOME/.oh-my-zsh-custom/zshrc $HOME/.zshrc
 }
