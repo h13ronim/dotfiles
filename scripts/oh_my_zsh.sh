@@ -12,10 +12,14 @@ install_oh_my_zsh() {
   [ -d $HOME/.oh-my-zsh ]
 }
 
-install_custom_oh_my_zsh() {
+install_oh_my_zsh_custom() {
   git clone git@github.com:h13ronim/oh-my-zsh-custom.git $HOME/.oh-my-zsh-custom || return $?
   mv $HOME/.zshrc $HOME/.zshrc.orig
   ln -sf $HOME/.oh-my-zsh-custom/zshrc $HOME/.zshrc
+}
+
+install_oh_my_zsh_work() {
+  git clone git@gitlab.com:h13ronim/oh-my-zsh-work.git $HOME/.oh-my-zsh-work || return $?
 }
 
 set_zsh_as_default_shell() {
@@ -25,6 +29,7 @@ set_zsh_as_default_shell() {
 install_customized_oh_my_zsh() {
   install_zsh || return $?
   install_oh_my_zsh || return $?
-  install_custom_oh_my_zsh || return $?
+  install_oh_my_zsh_custom || return $?
+  install_oh_my_zsh_work || return $?
   set_zsh_as_default_shell || return $?
 }
