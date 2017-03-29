@@ -28,6 +28,7 @@
 	quotepath = false
 	excludesfile = ~/.gitignore_global
 	editor = /usr/bin/vim
+  pager = diff-highlight | less -r
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -35,3 +36,8 @@
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
