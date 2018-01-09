@@ -1,13 +1,14 @@
 #!/bin/bash
 
-which git > /dev/null
-if [ $? -gt 0 ]; then
-  echo "Installing git..."
-  sudo apt-get install git || exit $?
-fi
+D_R=`cd \`dirname $0\` ; pwd -P`
 
-mkdir -p $HOME/projects || exit $?
+for FILE in \
+  gemrc \
+  gitconfig \
+  pryrc \
+  rubocop.yml \
+  vimrc.after \
 
-git clone git@gitlab.com:h13ronim/dotfiles.git $HOME/projects/dotfiles
-
-echo "go to ~/projects/dotfiles and run ./install.sh"
+do
+  ln -sf $D_R/configs/$FILE $HOME/.$FILE || exit $?
+done
