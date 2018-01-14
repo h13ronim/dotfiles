@@ -1,0 +1,2 @@
+--proxy 127.0.0.1:3128
+--output '/Volumes/internet-archive/youtube.com/%(uploader)s/%(title)s-%(id)s.%(ext)s'
