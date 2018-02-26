@@ -23,6 +23,7 @@ brew "icu4c"
 brew "libidn"
 brew "lua"
 brew "mas"
+brew "packer"
 brew "parallel"
 brew "pixz"
 brew "pwgen"
@@ -65,9 +66,13 @@ cask "synology-cloud-station-drive"
 cask "transmission"
 cask "tunnelblick"
 cask "vagrant"
+cask "virtualbox"
 cask "vlc"
 cask "caskroom/versions/google-chrome-canary"
 mas "DaisyDisk", id: 411643860
+mas "Install macOS High Sierra", id: 0
+mas "Install OS X El Capitan", id: 1018109117
+mas "Install OS X Mavericks", id: 675248567
 mas "Keynote", id: 409183694
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
