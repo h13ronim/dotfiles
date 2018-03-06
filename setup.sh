@@ -36,10 +36,18 @@ setup_mpv_config() {
 
 assign_default_applications() {
   if [ ! -f /usr/local/bin/duti ]; then
-    brew install duti
+    brew install duti || return $?
   fi
-  for EXT in {avi,mkv,mp4}; do
-    duti -s io.mpv "${EXT}" viewer
+
+  SOURCE_CODE_EXTS=(conf rb sh)
+  MOVIE_EXTS=(avi mkv mp4)
+
+  for EXT in ${MOVIE_EXTS[*]}; do
+    duti -s io.mpv "${EXT}" viewer || return $?
+  done
+
+  for EXT in ${SOURCE_CODE_EXTS[*]}; do
+    duti -s com.github.atom "${EXT}" editor || return $?
   done
 }
 
