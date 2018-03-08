@@ -8,12 +8,12 @@ main() {
   atom_packages_dump
 }
 
-brewfile_dump() {
-  brew bundle dump --force --file=$D_R/configs/Brewfile.$HOSTNAME
+atom_packages_dump() {
+  [ -f /usr/local/bin/apm ] && apm list --installed --bare > $D_R/configs/atom/packages.$HOSTNAME
 }
 
-atom_packages_dump() {
-  apm list --installed --bare > $D_R/configs/atom/packages.$HOSTNAME
+brewfile_dump() {
+  brew bundle dump --force --file=$D_R/configs/Brewfile.$HOSTNAME
 }
 
 main
