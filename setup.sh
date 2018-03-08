@@ -39,7 +39,7 @@ assign_default_applications() {
     brew install duti || return $?
   fi
 
-  SOURCE_CODE_EXTS=(conf rb sh md)
+  SOURCE_CODE_EXTS=(conf js rb sh md)
   MOVIE_EXTS=(avi mkv mp4)
 
   for EXT in ${MOVIE_EXTS[*]}; do
