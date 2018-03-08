@@ -1,0 +1,30 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "language-gfm"
+    ]
+    telemetryConsent: "no"
+  "exception-reporting":
+    userId: "20e5e342-dc55-49b8-80a2-538fcef7867f"
+  "file-icons":
+    coloured: false
+  fonts:
+    fontFamily: "Hack"
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.md"
+    ]
+    locales: [
+      "pl-PL"
+    ]
+  welcome:
+    showOnStartup: false
+".md.text":
+  editor:
+    softWrapAtPreferredLineLength: true

@@ -6,6 +6,7 @@ main() {
   setup_basic_configs
   setup_youtube_dl_config
   setup_mpv_config
+  setup_atom_config
   assign_default_applications
 }
 
@@ -32,6 +33,11 @@ setup_mpv_config() {
     rm -rf $HOME/.config/mpv || return $?
   fi
   ln -sf $D_R/configs/mpv $HOME/.config/mpv
+}
+
+setup_atom_config() {
+  mkdir -p $HOME/.atom || return $?
+  ln -sf $D_R/configs/atom/config.cson $HOME/.atom/config.cson
 }
 
 assign_default_applications() {
