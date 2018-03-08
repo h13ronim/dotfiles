@@ -38,6 +38,7 @@ setup_mpv_config() {
 setup_atom_config() {
   mkdir -p $HOME/.atom || return $?
   ln -sf $D_R/configs/atom/config.cson $HOME/.atom/config.cson
+  ln -sf $D_R/configs/atom/styles.less $HOME/.atom/styles.less
 }
 
 assign_default_applications() {
