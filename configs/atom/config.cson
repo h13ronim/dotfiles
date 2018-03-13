@@ -5,6 +5,7 @@
       "language-gfm"
     ]
     telemetryConsent: "no"
+  editor: {}
   "exception-reporting":
     userId: "20e5e342-dc55-49b8-80a2-538fcef7867f"
   "file-icons":

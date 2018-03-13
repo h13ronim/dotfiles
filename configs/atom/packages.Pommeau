@@ -1,6 +1,4 @@
-spell-check@0.73.0
-
-atom-beautify@0.32.0
+atom-beautify@0.32.2
 atom-fuzzy-grep@0.17.2
 atom-latex@0.8.4
 busy-signal@1.4.3
@@ -42,6 +40,7 @@ linter-write-good@0.9.0
 linter-xmllint@1.4.3
 merge-conflicts@1.4.5
 pigments@0.40.2
+prettier-atom@0.51.0
 project-manager@3.3.5
 rails-open-rspec@1.2.0
 react@0.18.0
