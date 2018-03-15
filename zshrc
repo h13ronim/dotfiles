@@ -46,28 +46,27 @@ ZSH_CUSTOM=~/.oh-my-zsh-custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  atom
-  apm
-  bgnotify
   bundler
+  docker-compose
   git
-  git-plus
   heroku
-  osx-plus
-  ping
-  radiozora
-  web-search
-  xcode
-  youtube-dl
 )
+
+if [[ "$OSTYPE" = darwin* ]] ; then
+  plugins+=(
+    apm
+    atom
+    bgnotify
+    codeclimate
+    xcode
+  )
+fi
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 path=(
-  $HOME/.chefdk/gem/ruby/2.1.0/bin
-  /opt/chefdk/embedded/bin
   /usr/local/bin
   /usr/bin
   /bin
@@ -101,14 +100,32 @@ path=(
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export BUNDLER_EDITOR="/usr/local/bin/mvim"
+export BUNDLER_EDITOR="/usr/local/bin/vim"
+
+alias ls='exa --git'
+
+alias lsa='ls -la'
+alias l='ls -la'
+alias ll='ls -l'
+alias la='ls -lA'
 
 setopt interactivecomments
 
 # Separate up arrow lookback for local and global ZSH history
 unsetopt inc_append_history
 
-source "$HOME/.oh-my-zsh-work/work.zsh"
+
+
+# One to rule them all
+source "$HOME/.compiled_shell_aliases.sh"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ -f $HOME/.rvm/scripts/rvm ]; then source $HOME/.rvm/scripts/rvm; fi
+
+# Set default locale in Linux
+if [[ "$OSTYPE" = linux* ]] ; then
+  export LANGUAGE=en_US.UTF-8
+  export LC_ALL=en_US.UTF-8
+  export LANG=en_US.UTF-8
+  export LC_TYPE=en_US.UTF-8
+fi
