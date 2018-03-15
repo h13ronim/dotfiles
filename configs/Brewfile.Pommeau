@@ -34,6 +34,7 @@ brew "rbenv"
 brew "ripgrep"
 brew "rsync"
 brew "shellcheck"
+brew "terraform"
 brew "tig"
 brew "vim", args: ["without-python"]
 brew "wget"
