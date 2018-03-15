@@ -23,6 +23,7 @@
     ]
     locales: [
       "pl-PL"
+      "en-US"
     ]
   welcome:
     showOnStartup: false
