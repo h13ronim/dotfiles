@@ -7,6 +7,7 @@ main() {
   setup_youtube_dl_config
   setup_mpv_config
   setup_atom_config
+  setup_oh_my_zsh
   assign_default_applications
 }
 
@@ -39,6 +40,13 @@ setup_atom_config() {
   mkdir -p $HOME/.atom || return $?
   ln -sf $D_R/configs/atom/config.cson $HOME/.atom/config.cson
   ln -sf $D_R/configs/atom/styles.less $HOME/.atom/styles.less
+}
+
+setup_oh_my_zsh() {
+  if [ -d $HOME/.oh-my-zsh-custom ]; then
+    rm -rf $HOME/.oh-my-zsh-custom || return $?
+  fi
+  ln -sf $D_R/configs/oh-my-zsh-custom $HOME/.oh-my-zsh-custom
 }
 
 assign_default_applications() {
