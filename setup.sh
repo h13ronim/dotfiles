@@ -17,6 +17,7 @@ setup_basic_configs() {
     gitconfig \
     pryrc \
     rubocop.yml \
+    tigrc \
     vimrc.after \
 
   do
