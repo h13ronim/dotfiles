@@ -86,10 +86,7 @@ cask "vlc"
 cask "caskroom/drivers/steelseries-engine"
 cask "caskroom/versions/google-chrome-canary"
 mas "DaisyDisk", id: 411643860
-mas "Install OS X El Capitan", id: 1018109117
-mas "Install OS X Mavericks", id: 675248567
 mas "Keynote", id: 409183694
-mas "macOS High Sierra", id: Install
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
