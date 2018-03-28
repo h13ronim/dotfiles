@@ -43,6 +43,7 @@ brew "vim", args: ["without-python"]
 brew "wget"
 brew "youtube-dl"
 brew "zsh"
+brew "zsh-completions"
 brew "h13ronim/otg/ddcctl"
 brew "heroku/brew/heroku"
 brew "vitorgalvao/tiny-scripts/cask-repair"

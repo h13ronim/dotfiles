@@ -50,6 +50,7 @@ plugins=(
   docker-compose
   git
   heroku
+  zsh-autosuggestions
 )
 
 if [[ "$OSTYPE" = darwin* ]] ; then
@@ -129,3 +130,6 @@ if [[ "$OSTYPE" = linux* ]] ; then
   export LANG=en_US.UTF-8
   export LC_TYPE=en_US.UTF-8
 fi
+
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
