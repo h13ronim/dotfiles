@@ -1,10 +1,25 @@
 @import "syntax-variables";
 
-atom-text-editor .gutter {
-  background-color: darken(@syntax-bg, 2%);
-}
-
 .ruby-test .panel-body,
 .ruby-test .panel-body pre {
   background-color: #000;
+}
+
+// one-dark theme
+atom-text-editor .gutter when not (@syntax-background-color = #fff) {
+  background-color: darken(@syntax-bg, 2%);
+}
+
+// apex-ui theme
+.footer when (@syntax-background-color = #fff) {
+  transition: opacity 150ms ease-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 150ms ease-out;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
 }

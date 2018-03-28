@@ -1,10 +1,14 @@
 "*":
+  "atom-focus-mode":
+    whenFocusModeIsActivated:
+      useTypeWriterMode: true
   core:
     automaticallyUpdate: false
     disabledPackages: [
       "language-gfm"
     ]
     telemetryConsent: "no"
+    titleBar: "custom"
   editor: {}
   "exception-reporting":
     userId: "20e5e342-dc55-49b8-80a2-538fcef7867f"
@@ -27,6 +31,12 @@
     locales: [
       "pl-PL"
       "en-US"
+    ]
+  "status-bar": {}
+  "theme-switch":
+    profiles: [
+      "one-dark-ui one-dark-syntax"
+      "apex-ui apex-syntax"
     ]
   welcome:
     showOnStartup: false

@@ -1,3 +1,5 @@
+apex-syntax@0.2.0
+apex-ui@1.0.3
 atom-beautify@0.32.2
 atom-fuzzy-grep@0.17.2
 atom-latex@0.8.4
@@ -5,7 +7,7 @@ busy-signal@1.4.3
 cucumber@0.6.0
 docker@0.8.0
 dockerletion@0.2.0
-file-icons@2.1.17
+file-icons@2.1.18
 fonts@3.0.3
 ide-crystal@0.3.3
 intentions@1.1.5
@@ -42,7 +44,6 @@ linter-write-good@0.9.0
 linter-xmllint@1.4.3
 merge-conflicts@1.4.5
 pigments@0.40.2
-prettier-atom@0.52.0
 project-manager@3.3.5
 rails-open-rspec@1.2.0
 react@0.18.0
@@ -51,4 +52,8 @@ show-repository-web@0.1.2
 sort-lines@0.18.0
 symbols-tree-view@0.14.0
 tabularize@0.2.5
+theme-switch@0.6.0
 toggle-quotes@1.1.0
+typewriter@0.7.1
+wordcount@2.10.4
+
