@@ -12,6 +12,9 @@
     coloured: false
   fonts:
     fontFamily: "Hack"
+  racer:
+    racerBinPath: "/Users/h13ronim/.cargo/bin/racer"
+    rustSrcPath: "/Users/h13ronim/.cargo/registry/src"
   "spell-check":
     grammars: [
       "source.asciidoc"
@@ -30,3 +33,7 @@
 ".md.text":
   editor:
     softWrapAtPreferredLineLength: true
+".rust.source":
+  editor:
+    showIndentGuide: false
+    showInvisibles: false

@@ -17,6 +17,7 @@ language-elixir@0.22.0
 language-haml@0.25.2
 language-lua@0.9.11
 language-markdown@0.25.1
+language-rust@0.4.12
 language-terraform@0.8.1
 linter@2.2.0
 linter-codeclimate@0.2.5
@@ -32,6 +33,7 @@ linter-php@1.5.1
 linter-reek@2.2.2
 linter-rubocop@2.2.3
 linter-ruby@1.2.6
+linter-rust@0.8.4
 linter-sass-lint@1.8.3
 linter-scss-lint@3.1.1
 linter-shellcheck@1.4.6
@@ -50,4 +52,3 @@ sort-lines@0.18.0
 symbols-tree-view@0.14.0
 tabularize@0.2.5
 toggle-quotes@1.1.0
-
